@@ -10,7 +10,7 @@
             document.getElementById('modal-title').innerText = product.title;
             document.getElementById('modal-desc').innerText = product.desc;
             document.getElementById('modal-price').innerText = product.price;
-            document.getElementById('booking-link').href = product.link;
+            document.getElementById('booking-link').href = `https://wa.me/628117514173?text=Halo,%20saya%20ingin%20memesan:%0AJenis%20Studio:%20${encodeURIComponent(product.title)}%0AWaktu:%20[Tulis%20waktu]`;
             document.getElementById('modal').classList.remove('hidden');
         }
         function closeModal() {
@@ -37,15 +37,15 @@
     <section class="container mx-auto py-10">
         <h2 class="text-2xl font-bold text-center text-gray-800">Layanan Kami</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 1', desc: 'Ukuran studio: Besar. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 60.000/jam (15 org+)', link: 'https://wa.me/628117514173'})">
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 1', desc: 'Ukuran studio: Besar. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 60.000/jam (15 org+)'})">
                 <img src="produk1.jpg" alt="Studio 1" class="w-full h-48 object-cover rounded-md">
                 <h3 class="text-lg font-semibold mt-4">Studio 1 (Besar)</h3>
             </div>
-            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 2', desc: 'Ukuran studio: Sedang. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 40.000/jam (max 7 org)', link: 'https://wa.me/628117514173'})">
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 2', desc: 'Ukuran studio: Sedang. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 40.000/jam (max 7 org)'})">
                 <img src="produk2.jpg" alt="Studio 2" class="w-full h-48 object-cover rounded-md">
                 <h3 class="text-lg font-semibold mt-4">Studio 2 (Sedang)</h3>
             </div>
-            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 3', desc: 'Ukuran studio: Kecil. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 30.000/jam (max 5 org)', link: 'https://wa.me/628117514173'})">
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 3', desc: 'Ukuran studio: Kecil. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 30.000/jam (max 5 org)'})">
                 <img src="produk3.jpg" alt="Studio 3" class="w-full h-48 object-cover rounded-md">
                 <h3 class="text-lg font-semibold mt-4">Studio 3 (Kecil)</h3>
             </div>
