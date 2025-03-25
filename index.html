@@ -10,7 +10,10 @@
             document.getElementById('modal-title').innerText = product.title;
             document.getElementById('modal-desc').innerText = product.desc;
             document.getElementById('modal-price').innerText = product.price;
-            document.getElementById('booking-link').href = `https://wa.me/628117514173?text=Halo,%20saya%20ingin%20memesan:%0AJenis%20Studio:%20${encodeURIComponent(product.title)}%0AWaktu:%20[Tulis%20waktu]`;
+            
+            const waMessage = `Halo, saya ingin memesan:\nJenis Studio: ${product.title}\nWaktu: [Tulis waktu]`;
+            document.getElementById('booking-link').href = `https://wa.me/628117514173?text=${encodeURIComponent(waMessage)}`;
+            
             document.getElementById('modal').classList.remove('hidden');
         }
         function closeModal() {
