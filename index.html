@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDO SIX-SDC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showDetails(product) {
+            document.getElementById('modal-title').innerText = product.title;
+            document.getElementById('modal-desc').innerText = product.desc;
+            document.getElementById('modal-price').innerText = product.price;
+            document.getElementById('booking-link').href = product.link;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Logo" class="h-8 mr-2">
+            <span class="text-xl font-bold">INDO SIX-SDC</span>
+        </div>
+        <a href="https://www.instagram.com/indodanceschool/" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="h-8">
+        </a>
+    </header>
+    
+    <section class="container mx-auto text-center py-10">
+        <h1 class="text-3xl font-bold text-gray-800">INDO SIX-SDC</h1>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">INDO SIX-SDC (Street Dance Crew) adalah tempat latihan dengan berbagai pilihan studio sesuai kebutuhan Anda.</p>
+    </section>
+    
+    <section class="container mx-auto py-10">
+        <h2 class="text-2xl font-bold text-center text-gray-800">Layanan Kami</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 1', desc: 'Ukuran studio: Besar. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 60.000/jam (15 org+)', link: 'https://wa.me/628117514173'})">
+                <img src="produk1.jpg" alt="Studio 1" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-lg font-semibold mt-4">Studio 1 (Besar)</h3>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 2', desc: 'Ukuran studio: Sedang. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 40.000/jam (max 7 org)', link: 'https://wa.me/628117514173'})">
+                <img src="produk2.jpg" alt="Studio 2" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-lg font-semibold mt-4">Studio 2 (Sedang)</h3>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center cursor-pointer" onclick="showDetails({title: 'Studio 3', desc: 'Ukuran studio: Kecil. Fasilitas: Fan, Exhaust Fan, Mentor Desk and Chair, Loker, Spot Video Shoot, Changing Room, Waiting Room, Big Space, CCTV.', price: 'Rp 30.000/jam (max 5 org)', link: 'https://wa.me/628117514173'})">
+                <img src="produk3.jpg" alt="Studio 3" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-lg font-semibold mt-4">Studio 3 (Kecil)</h3>
+            </div>
+        </div>
+    </section>
+    
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+            <h3 id="modal-title" class="text-xl font-bold"></h3>
+            <p id="modal-desc" class="text-gray-600 mt-2"></p>
+            <p id="modal-price" class="text-blue-600 font-bold mt-2"></p>
+            <a id="booking-link" href="#" target="_blank" class="mt-4 block px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-700">Boking Sekarang</a>
+            <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-700">Tutup</button>
+        </div>
+    </div>
+    
+    <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+        &copy; 2025 INDO SIX-SDC.
+    </footer>
+</body>
+</html>

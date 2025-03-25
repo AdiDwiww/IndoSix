@@ -1,0 +1,182 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+/* Sidebar Sticky */
+.sidebar {
+    width: 250px;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #1e2a30;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+}
+
+/* Navbar (Header) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: calc(100% - 250px);
+    top: 0;
+    left: 250px;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-content .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-content .logo img {
+    max-width: 40px;
+}
+
+.notification {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.notification::after {
+    content: '\1F514'; /* Unicode untuk lonceng */
+    font-size: 24px;
+}
+
+/* Produk */
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 80px 0 20px; /* Tambahkan padding atas untuk navbar */
+}
+
+.product {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* 3 produk dalam satu baris */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #35424a;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+    header {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+    .product {
+        width: calc(50% - 40px); /* 2 produk dalam satu baris */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px;
+    }
+    .main-content {
+        margin-left: 100px;
+        width: calc(100% - 100px);
+    }
+    header {
+        width: calc(100% - 100px);
+        left: 100px;
+    }
+    .product {
+        width: 100%; /* 1 produk per baris */
+    }
+}
